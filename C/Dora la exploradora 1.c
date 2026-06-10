@@ -14,7 +14,7 @@ unsigned int diagonalOfN(unsigned long long int n) {
     }
 }
 
-unsigned long long int triangularNumberN(unsigned long long int n) {
+unsigned long long int triangularNumberN(unsigned int n) {
     unsigned long long int nPlus1 = n + 1;
     
     if(isOdd(n)) {
@@ -33,7 +33,7 @@ int main() {
     
     while(scanf("%llu",&n) && n != 0) {
         d = diagonalOfN(n);
-        n -= triangularNumberN((unsigned long long)(d - 1));
+        n -= triangularNumberN(d - 1);
         
         coord1 = n;
         coord2 = d - (n - 1);
